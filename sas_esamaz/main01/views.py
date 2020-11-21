@@ -3,6 +3,8 @@ from django.shortcuts import render
 # Create your views here.
 def home(request):
     return render(request,'home.html')
+def testequasar(request):
+    return render(request,'testequasar.html')
 
 def visualizacao(request):
     return render(request,'visualizacao.html')

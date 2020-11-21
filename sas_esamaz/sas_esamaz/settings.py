@@ -17,7 +17,7 @@ SECRET_KEY = 'c%49(o-8fhhh#5l4!b^=w(0n+(nq+8k&vl*^)6oxpsr-^wr)r!'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['192.168.100.8']
+ALLOWED_HOSTS = ['192.168.100.8','127.0.0.1']
 
 
 # Application definition
@@ -46,7 +46,7 @@ ROOT_URLCONF = 'sas_esamaz.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.join(BASE_DIR, 'main01/templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
