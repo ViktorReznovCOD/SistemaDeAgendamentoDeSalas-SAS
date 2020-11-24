@@ -18,14 +18,53 @@
     <script src="https://cdn.jsdelivr.net/npm/quasar@1.14.5/dist/quasar.umd.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/quasar@1.14.5/dist/lang/pt-br.umd.min.js"></script>
 
-    <div class="q-app">
-        <q-btn id="q-app" >Teste</q-btn>
-        <q-btn id="q-app" >Teste</q-btn>
+    <div id="q-app">
+      <q-layout view="lHh lpr lFf" container style="height: 400px" class="shadow-2 rounded-borders">
+      <q-header elevated>
+        <q-toolbar>
+          <q-btn flat round dense icon="menu" class="q-mr-sm" />
+          <q-avatar>
+            <img src="https://cdn.quasar.dev/logo/svg/quasar-logo.svg">
+          </q-avatar>
 
+          <q-toolbar-title>Quasar Framework</q-toolbar-title>
+
+          <q-btn flat round dense icon="whatshot" />
+        </q-toolbar>
+      </q-header>
+
+      <div class="row">
+        <div class="col-6">
+          <q-btn color="primary">
+           Teste
+          </q-btn>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col">
+          <q-btn >
+            Teste
+          </q-btn>
+        </div>
+      </div>
+
+      <div class="q-pa-md q-gutter-sm">
+
+        <q-bar>
+          <div class="cursor-pointer">File</div>
+          <div class="cursor-pointer">Edit</div>
+          <div class="cursor-pointer gt-xs">View</div>
+          <div class="cursor-pointer gt-xs">Window</div>
+          <div class="cursor-pointer">Help</div>
+          <q-space />
+          <q-btn dense flat icon="minimize" />
+          <q-btn dense flat icon="crop_square" />
+          <q-btn dense flat icon="close" />
+        </q-bar>
+      </div>
+    </q-layout>
     </div>
-
-
-
     <script>
       Quasar.lang.set(Quasar.lang.ptBr)
 
