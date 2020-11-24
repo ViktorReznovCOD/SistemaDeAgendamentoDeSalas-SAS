@@ -17,7 +17,7 @@ SECRET_KEY = 'c%49(o-8fhhh#5l4!b^=w(0n+(nq+8k&vl*^)6oxpsr-^wr)r!'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['192.168.100.8','127.0.0.1']
+ALLOWED_HOSTS = []
 
 
 # Application definition
@@ -66,16 +66,16 @@ WSGI_APPLICATION = 'sas_esamaz.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
 
-'''DATABASES = {
+DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'testedb', 
+        'NAME': 'postgres', 
         'USER': 'postgres', 
         'PASSWORD': 'felipe',
-        'HOST': '127.0.0.1', 
+        'HOST': 'localhost', 
         'PORT': '5432',
     }
-}'''
+}
 
 
 # Password validation
@@ -114,4 +114,8 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
-STATIC_URL = '/static/'
+STATIC_URL = '/frontend/'
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, 'frontend')
+]
+#STATIC_ROOT = os.path.join(BASE_DIR, 'static') #ESTE É A SAÍDA, ARQUIVO QUE SERÁ GERADO APÓS O COMANDO COLLECTSTATIC
