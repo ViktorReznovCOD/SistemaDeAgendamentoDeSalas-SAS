@@ -2749,16 +2749,16 @@
 .w3l-call-to-action_9 .call-w3:before {
   width: 100%;
   content: "";
-  background: rgba(0, 0, 0, 0.8);
+  background: rgba(255, 255, 255, 0.712);
   position: absolute;
   top: 0px;
   bottom: 0px;
   opacity: .6;
   z-index: -1; }
 
-.w3l-call-to-action_9 .bg-color-white {
+.w3l-call-to-action_9 .bg-color-white {/*AQUI MUDA A COR DE/*AQUI MUDA A COR DE DENTRO DOS CARTOES*/
   padding: 25px 25px;
-  background-color: rgba(255, 255, 255, 0.9);
+  background-color: rgba(15, 119, 46, 0.685);
   border-radius: 10px; }
 
 .w3l-call-to-action_9 .color-2 h4 a {
