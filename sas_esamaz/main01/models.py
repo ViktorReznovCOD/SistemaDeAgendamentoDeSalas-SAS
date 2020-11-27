@@ -4,10 +4,15 @@ from django.db import models
 class Professor(models.Model):
     ID = models.CharField(auto_created=True ,max_length=6, primary_key=True)
     NOME = models.CharField(max_length=30)
+    def __str__(self):
+        return self.ID
+    
 
 class Tipo_De_Sala(models.Model):
     ID = models.CharField(max_length=30)
     NOME = models.CharField(max_length=30)
+    def __str__(self):
+        return self.NOME
 
 class Salas(models.Model):
     CHOICE = [(1,'Ocupado'),(2,'Disponível')]
@@ -15,12 +20,16 @@ class Salas(models.Model):
     NOME = models.CharField(max_length=30)
     #FK_TIPO_SALAS = models.ForeignKey ( )
     STATUS = models.BooleanField(choices=CHOICE,default=1, blank=False)
+    def __str__(self):
+        return self.NOME
 
 class Periodo(models.Model):
     ID = models.CharField(auto_created=True ,max_length=6, primary_key=True)
     NOME = models.CharField(max_length=30)
     #INICIO =
     #TERMINO =
+    def __str__(self):
+        return self.NOME
 
 class TabelaDeAgendamento (models.Model):
     CHOICE = [(1,'Sim'), (2,'Não')]
@@ -32,3 +41,5 @@ class TabelaDeAgendamento (models.Model):
     #FK_PERIODOS = models.ForeignKey(Periodo)
     #FK_PROFESSOR = models.ForeignKey(Professor)
     CAIXA_DE_SOM = models.BooleanField(choices=CHOICE,blank=True)
+    def __str__(self):
+        return self.ID

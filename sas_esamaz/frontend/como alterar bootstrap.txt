@@ -1,0 +1,9 @@
+1° ter o NODE instalado na maquina 
+2° "npm init -y" para gerar o package.json
+3° "npm install node-sass -g" (-g para intalar de maneira global. verificar como faz so para o projeto)
+4° "npm install bootstrap --save"
+5° "npm install jquery --save"
+6° "npm install popper.js --save" (responsavel pelo dropdown |  USAR O QUE ESTÁ NA PASTA "popper.js\dist\umd")
+
+no arquivo package.jason pode-se salvar scripts com os comandos já config lá
+

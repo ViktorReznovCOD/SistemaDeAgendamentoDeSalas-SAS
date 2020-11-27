@@ -1,117 +1,36 @@
 {% load static %}
 <!DOCTYPE html>
-<html lang="en">
-    <html lang="en">
-        <head>
-          <!-- Required meta tags -->
-          <meta charset="utf-8">
-          <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-      
-          <title>test1</title>
-      
-          <!-- Template CSS -->
-          <link rel="stylesheet" href="{% static 'assets/css/style-starter.css'%}">
-          <link href="https://fonts.googleapis.com/css?family=Josefin+Slab:400,700,700i&display=swap" rel="stylesheet">
-          <link href="https://fonts.googleapis.com/css?family=Poppins:400,700&display=swap" rel="stylesheet">
-          <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
-        </head>
-<body class="bg-primary">
-    <section class=" w3l-header-4 header-sticky">
-        <header class="absolute-top">
-            <div class="container">
-                <nav class="navbar navbar-expand-lg navbar-light">
-                    <h1><a class="navbar-brand" href="#"><span class="" aria-hidden="true"><img style="width:50px;height:50px;" src="{% static 'assets/images/esamazico.ico'%}" alt=""></span> 
-                    SAS
-                    </a></h1>
-                        <button class="navbar-toggler bg-gradient collapsed" type="button" data-toggle="collapse"
-                            data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
-                            aria-label="Toggle navigation">
-                            <span class="fa icon-expand fa-bars"></span>
-                            <span class="fa icon-close fa-times"></span>
-                        </button>
-            
-                    <!--div class="collapse navbar-collapse" id="navbarNav">
-                        <ul class="navbar-nav ml-auto">
-                            <li class="nav-item">
-                                <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="about.html">About</a>
-                            </li> 
-                            <li class="nav-item">
-                                <a class="nav-link" href="services.html">Services</a>
-                            </li> 
-                            <li class="nav-item">
-                                <a class="nav-link" href="contact.html">Contact</a>
-                            </li>
-                        </ul>
-                    </div>-->
-                </div>
-        
-                </nav>
-        </div>
-          </header>
-    </section>
-
-    <section class="w3l-call-to-action_9">
-        <div class="call-w3 editContent">
-            <div class="container">
-                <div class="grids">
-                    <div class="grids-content row">
-                        <div class="column col-lg-4 col-md-6 col-sm-6 color-2 editContent">
-                            <div class="bg-color-white">   
-                                <div class="span-color editContent">     
-                                    <span class="fa fa-calendar-check-o" aria-hidden="true"></span>
-                                </div>
-                            <h4><a href="#" class=".fontcard editContent">SALA01</a></h4>
-                                
-                            </div>
-                        </div>
-                        <div class="column col-lg-4 col-md-6 col-sm-6 color-2 editContent">
-                            <div class="bg-color-white">
-                                <div class="span-color editContent">  
-                                <span class="fa fa-calendar-check-o" aria-hidden="true"></span>
-                            </div>
-                            <h4><a href="#" class=" editContent">SALA02</a></h4>  
-                            </div>
-                        </div>
-    
-                        <div class="column col-lg-4 col-md-6 col-sm-6 color-2 editContent">
-                            <div class="bg-color-white">
-                                <div class="span-color editContent">  
-                                <span class="fa fa-calendar-check-o" aria-hidden="true"></span>
-                                </div>
-                            <h4><a href="about.html" class=" editContent">SALA03</a></h4>
-                            </div>
-                        </div>
-                        <div class="column col-lg-4 col-md-6 col-sm-6 color-2 editContent">
-                            <div class="bg-color-white">   
-                                <div class="span-color editContent">     
-                                <span class="fa fa-calendar-check-o" aria-hidden="true"></span>
-                                 </div>
-                            <h4><a href="about.html" class=" editContent">SALA04</a></h4>
-                            </div>
-                        </div>       
-                        <div class="column col-lg-4 col-md-6 col-sm-6 color-2 editContent">
-                            <div class="bg-color-white">   
-                                <div class="span-color editContent">     
-                                <span class="fa fa-calendar-check-o" aria-hidden="true"></span>
-                                </div>
-                            <h4><a href="about.html" class=" editContent">SALA05</a></h4>
-                            </div>
-                        </div>
-                        <div class="column col-lg-4 col-md-6 col-sm-6 color-2 editContent">
-                            <div class="bg-color-white">   
-                                    <div class="span-color editContent">     
-                                    <span class="fa fa-calendar-check-o" aria-hidden="true"></span>
-                                    </div>
-                                <h4><a href="about.html" class=" editContent">SALA06</a></h4>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+<head>
+    <title>test1</title>
+    <!-- Template CSS -->
+    <link rel="stylesheet" href="{%static 'css/style.css'%}">
+</head>
+<body class="bg-light">
+    <header class="absolute-top">
+            <div class="container-fluid">
+                <nav class="navbar navbar-dark bg-primary">
+                    <a class="navbar-brand" href="#">
+                      <img src="{%static 'img/logo_esamaz_topo.png'%}" style="width:250px;height:82;"  class="d-inline-block align-top" alt="">
+                    </a>
+                </nav>       
             </div>
-        </div>
+    </header>
+<!--conteudo-->
+    <section class="container">
+    <div class="row">
+       
+        {% for i in card %}
+        <div class="card border-dark mb-3" style="max-width: 15rem;">
+            <div class="card-header">{{i.OBSERVAÇÃO}}</div>
+                <div class="card-body text-dark">
+                  <h5 class="card-title">{{i.NOME}}</h5>
+                  <p class="card-text">{{i.FK_SALAS.STATUS}}</p>
+                </div>
+              </div>
+        {% endfor %}
+    </div>
     </section>
+<!--fecha conteudo-->
+    
 </body>
 </html>
