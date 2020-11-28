@@ -1,9 +1,9 @@
 from django.shortcuts import render
-from .models import TabelaDeAgendamento, Tipo_De_Sala
+from .models import TabelaDeAgendamento, Tipo_De_Sala, Salas
 
 # Create your views here.
 def home(request):
-    card = Tipo_De_Sala.objects.order_by('NOME')[0:]
+    card = Salas.objects.order_by('NOME')[0:]
     context = {'card':card}
     return render(request,'teste1.html',context)
 
