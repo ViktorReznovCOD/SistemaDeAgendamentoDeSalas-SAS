@@ -21,10 +21,10 @@
        
         {% for i in card %}
         <div class="card border-dark mb-3" style="max-width: 15rem;">
-            <div class="card-header">{{i.OBSERVAÇÃO}}</div>
+            <div class="card-header">{{i.STATUS}}</div>
                 <div class="card-body text-dark">
                   <h5 class="card-title">{{i.NOME}}</h5>
-                  <p class="card-text">{{i.FK_TIPO_DE_SALA}}</p>
+                  <p class="card-text">{{i.FK_TIPO_DE_SALAS}}</p>
                 </div>
               </div>
         {% endfor %}

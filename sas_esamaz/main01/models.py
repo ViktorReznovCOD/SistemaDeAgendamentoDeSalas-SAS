@@ -2,11 +2,16 @@ from django.db import models
 from django.contrib.contenttypes.models import ContentType
 
 # Create your models here.
+
 class Professor(models.Model):
     NOME = models.CharField(max_length=30)
     def __str__(self):
-        return self.ID
-    
+        return self.NOME
+
+class Turma:
+    NOME = models.CharField(max_length=30)
+    def __str__(self):
+        return self.NOME
 
 class Tipo_De_Sala(models.Model):
     NOME = models.CharField(max_length=30)
@@ -16,7 +21,7 @@ class Tipo_De_Sala(models.Model):
 class Salas(models.Model):
     CHOICE = [(1,'Ocupado'),(2,'Disponível')]
     NOME = models.CharField(max_length=30)
-    FK_TIPO_SALAS = models.ForeignKey (ContentType)#Tipo_De_Sala, on_delete=models.CASCADE
+    #FK_TIPO_SALA = models.ForeignKey (Tipo_De_Sala, on_delete=models.CASCADE)
     STATUS = models.BooleanField(choices=CHOICE,default=1, blank=False)
     def __str__(self):
         return self.NOME
